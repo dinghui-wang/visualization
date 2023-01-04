@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.staticfile.org/three.js/0.147.0/three.min.js"></script>
+    <style>
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="info">Description</div>
+    <script>
+        const { TextGeometry } = THREE
+        const text = "123456"
+        const parameters = {
+            size: 20,
+        }
+        new TextGeometry(text, parameters);
+    </script>
+</body>
+
+</html>

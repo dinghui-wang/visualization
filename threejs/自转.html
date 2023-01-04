@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.staticfile.org/three.js/0.147.0/three.min.js"></script>
+</head>
+
+<body>
+    <script>
+        const { WebGLRenderer, Scene, SphereGeometry, PerspectiveCamera, LineBasicMaterial, Vector3, BufferGeometry, Line } = THREE
+
+        const camera = new PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 1000)
+
+        camera.position.set(0, 50, 0)
+
+        camera.up.set(0, 0, 1)
+
+        camera.lookAt(0, 0, 0)
+
+        const radius = 1
+
+        const widthSegments = 6
+        const heightSegments = 6
+
+        const sphereGeometry = new SphereGeometry({
+            radius,
+            widthSegments,
+            heightSegments
+        })
+
+        const rotations = []
+        const render = (time) => {
+            time *= 0.001
+            renderer.render(scence, camera)
+
+        }
+
+    </script>
+</body>
+
+</html>
